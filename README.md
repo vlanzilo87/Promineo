@@ -1,2 +1,1 @@
 # Promineo
-## Hello World
