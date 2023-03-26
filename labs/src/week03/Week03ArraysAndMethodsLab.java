@@ -117,11 +117,18 @@ public class Week03ArraysAndMethodsLab {
 		//			returns true if the string is a palindrome
 
 		String[] arrString = {"hello", "goodbye", "world"};
+		int[] arrNum = {7, 23, 40, 6, 12};
+		double[] arrDoub = {1.37, 20.6, 87.88, 34.9, 52.09};
 		
 		printGreeting("Bob");
 		System.out.println(returnGreeting("John"));
 		System.out.println(moreLetters("Hello", 3));
 		System.out.println(stringInArray(arrString, "world"));
+		System.out.println(smallestInt(arrNum));
+		System.out.println(avgDouble(arrDoub));
+		System.out.println(stringToInt(arrString));
+		System.out.println(evenOdd(arrString));
+		System.out.println(palindrome("mom"));
 	}
 	
 	
@@ -152,19 +159,63 @@ public class Week03ArraysAndMethodsLab {
 	
 	// Method 17:
 	public static int smallestInt(int[] arr) {
-		
+		int small = arr[0];
+		for (int i = 1; i < arr.length; i++) {
+			if (arr[i] < small) {
+				small = arr[i];
+			}
+		}
+		return small;
 	}
 	
 	// Method 18:
-
+	public static double avgDouble(double[] arr) {
+		double sum = 0;
+		for (double num : arr) {
+			sum += num;
+		}
+		double average = sum/arr.length;
+		return average;
+	}
 	
 	// Method 19:
-
+	public static int[] stringToInt(String[] arr) {
+		int[] ints = new int[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			ints[i] = arr[i].length();
+		}
+		return ints;
+	}
 	
 	// Method 20:
-	
+	public static boolean evenOdd(String[] arr) {
+		int even = 0;
+		int odd = 0;
+		for (String str : arr) {
+			if (str.length() % 2 == 0) {
+				even += str.length();
+			} else {
+				odd += str.length();
+			}
+		}
+		if (even > odd) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
 	// Method 21:
-	
+	public static boolean palindrome(String str) {
+		char[] letters = new char[str.length()];
+		for (int i = 0; i < str.length(); i++) {
+			letters[i] = str.charAt(i);
+		}
+		String newWord = "";
+		for (int i = letters.length - 1; i >= 0; i--) {
+			newWord += letters[i];
+		}
+		return str.equals(newWord);
+	}
 
 }
