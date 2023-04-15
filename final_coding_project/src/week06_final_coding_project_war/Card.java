@@ -40,9 +40,8 @@ public class Card {
 		
 	//describe method
 	public void describe() {
-		System.out.println("Card name is " + name);
-		System.out.println("Card suit is " + suit);
-		System.out.println("Card value is " + value);
+		System.out.println("Your card is " + name);
+		//System.out.println("Card suit is " + suit);
+		//System.out.println("Card value is " + value);
 	}
-
 }

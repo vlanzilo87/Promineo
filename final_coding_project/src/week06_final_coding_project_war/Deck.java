@@ -52,24 +52,12 @@ public class Deck {
 		//System.out.println(card.name);
 		//cards.remove(card);
 		Card card = cards.remove(0);
-		System.out.println("This is " + card.name);
+		//System.out.println("This is " + card.name);
 		return card;
 	}
 	
 	//describe method
 	public void describe() {
-//		for (Card card : cards) {
-//			if (card.value == 11) { //can use .getValue()
-//				System.out.println("Jack of " + card.suit);
-//			} else if (card.value == 12) {
-//				System.out.println("Queen of " + card.suit);
-//			} else if (card.value == 13) {
-//				System.out.println("King of " + card.suit);
-//			} else if (card.value == 14) {
-//				System.out.println("Ace of " + card.suit);
-//			} else {
-//				System.out.println(card.name);
-//			}
 		for (Card card : cards) {
 			System.out.println(card.name);
 		}

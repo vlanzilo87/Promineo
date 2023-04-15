@@ -23,7 +23,9 @@ public class Player {
 	
 	public void setHand(List<Card> hand) {
 		this.hand = hand;
-		System.out.println(hand.get(0).name);
+//		for (Card card : hand) {
+//			card.describe();
+//		}
 	}
 	
 	public String getName() {
@@ -45,7 +47,7 @@ public class Player {
 	//describe method
 	public void describe() {
 		System.out.println("Player name: " + name);
-		System.out.println(name + "has a score of " + score);
+		System.out.println(name + " has a score of " + score);
 		
 		for (Card card : hand) {
 			System.out.println(card.name);
@@ -55,6 +57,7 @@ public class Player {
 	//flip method
 	public Card flip() {
 		Card card = this.hand.remove(0);
+		card.describe();
 		return card;
 	}
 	
