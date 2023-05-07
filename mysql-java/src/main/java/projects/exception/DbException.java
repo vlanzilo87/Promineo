@@ -7,6 +7,7 @@ package projects.exception;
  * @author Vincent Lanzilotti
  *
  */
+@SuppressWarnings("serial")
 public class DbException extends RuntimeException {
 
 	/**

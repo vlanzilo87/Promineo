@@ -17,7 +17,9 @@ public class ProjectsApp {
 	private ProjectService projectService = new ProjectService();
 	
 	// @formatter:off
-	private List<String> operations = List.of("1) Add a project");
+	private List<String> operations = List.of(
+			"1) Add a project"
+	);
 			
 	// @formatter:on
 	
@@ -100,18 +102,6 @@ public class ProjectsApp {
 		return Objects.isNull(input) ? -1 : input;
 	}
 	
-	private void printOperations() {
-		System.out.println("\nThese are the available selections. Press the Enter key to quit:");
-		
-		//Lambda
-		//operations.forEach(line -> System.out.println("  " + line));
-		
-		for(String line : operations) {
-			System.out.println("  " + line);
-		}
-		
-	}
-	
 	private Integer getIntInput(String prompt) {
 		String input = getStringInput(prompt);
 		
@@ -134,5 +124,15 @@ public class ProjectsApp {
 		
 		return input.isBlank() ? null : input.trim();
 	}
-
+	
+	private void printOperations() {
+		System.out.println("\nThese are the available selections. Press the Enter key to quit:");
+		
+		//Lambda
+		//operations.forEach(line -> System.out.println("  " + line));
+		
+		for(String line : operations) {
+			System.out.println("  " + line);
+		}
+	}
 }
