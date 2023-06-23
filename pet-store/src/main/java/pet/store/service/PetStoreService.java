@@ -21,7 +21,9 @@ import pet.store.entity.PetStore;
 public class PetStoreService {
 	@Autowired
 	private PetStoreDao petStoreDao;
+	@Autowired
 	private EmployeeDao employeeDao;
+	@Autowired
 	private CustomerDao customerDao;
 	
 	@Transactional(readOnly = false)

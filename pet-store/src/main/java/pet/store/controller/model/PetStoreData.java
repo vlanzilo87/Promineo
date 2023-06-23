@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import pet.store.entity.Customer;
 import pet.store.entity.Employee;
 import pet.store.entity.PetStore;
+import pet.store.controller.model.PetStoreEmployee;
 
 @Data
 @NoArgsConstructor
