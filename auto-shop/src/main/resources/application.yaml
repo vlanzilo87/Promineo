@@ -1,0 +1,15 @@
+spring:
+   datasource:
+      username: auto_shop
+      password: auto_shop
+      url: jdbc:mysql://localhost:3306/auto_shop
+      
+   jpa:
+      hibernate:
+         ddl-auto: update
+      show-sql: true
+#      defer-datasource-initilization: true
+   
+#   sql:
+#      init:
+#         mode: always
