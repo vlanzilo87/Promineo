@@ -168,7 +168,7 @@ public class AutoShopService {
 		return new AutoShopData(findAutoShopById(autoShopId));
 	}
 	
-	@Transactional(readOnly = true)
+	@Transactional(readOnly = false)
 	public void deleteAutoShopById(Integer autoShopId) {
 		AutoShop autoShop = findAutoShopById(autoShopId);
 		autoShopDao.delete(autoShop);
